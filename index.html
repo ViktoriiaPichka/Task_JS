@@ -1,175 +1,171 @@
 <!DOCTYPE html>
-<html>
-
+<!--Базовые знания JS. Выписать все базовые типы данных (создать переменные), произвести операции сравнения над типами, математические операции над числами и строками.-->
 <body>
-  <script>
-    'use strict';
-    var name = '64',
-    number = 15,
-    bul = true,
-    bulf = false,
-    age = null,
-    x = undefined,
-    admin = { numb : 'Cat'};
-    
-    console.log( name + name ); //6464
-    console.log( name + number ); //6415
-    console.log( name + bul ); //64true
-    console.log( name + bulf ); //64false
-    console.log( name + age ); //64null
-    console.log( name + x ); //64undefined
-    console.log( name + admin ); //64[object Object]
-    
-    console.log( name - name ); //0
-    console.log( name - number ); //49
-    console.log( name - bul ); //63
-    console.log( name - bulf ); //64
-    console.log( name - age ); //64
-    console.log( name - x ); //Nan
-    console.log( name - admin ); //Nan
-    
-    console.log( name / name ); //1
-    console.log( name / number ); //4.266666666666667
-    console.log( name / bul ); //64
-    console.log( name / bulf ); //Infinity
-    console.log( name / age ); //Infinity
-    console.log( name / x ); //Nan
-    
-    console.log( name * name ); //4096
-    console.log( name * number ); //960
-    console.log( name * bul ); //64
-    console.log( name * bulf ); //0
-    console.log( name * age ); //0
-    console.log( name * x ); //Nan
-    console.log( name * admin ); //Nan
-    
-    console.log( name == name ); //true
-    console.log( name == number ); //false
-    console.log( name == bul ); //false
-    console.log( name == bulf ); //false
-    console.log( name == age ); //false
-    console.log( name == x ); //false
-    console.log( name == admin ); //false
-    console.log( '1'== bul ); //true
-    console.log( '15' == number ); //true
-    console.log( '' == bul ); //false
-    console.log( '' == bulf ); //true
-    console.log( '' == age ); //false
-    
-    
-    console.log( name >= name ); //true
-    console.log( name >= number ); //true
-    console.log( name >= bul ); //true
-    console.log( name >= bulf ); //true
-    console.log( name >= age ); //true
-    console.log( name >= x ); //false
-    console.log( name >= admin ); //false
-    console.log( '1' >= bul ); //true
-    console.log( '15' >= number ); //true
-    console.log( '' >= bul ); //false
-    console.log( '' >= bulf ); //true
-    console.log( '' >= age ); //true
-    
-    console.log( name <= name ); //true
-    console.log( name <= number ); //true
-    console.log( name <= bul ); //true
-    console.log( name <= bulf ); //true
-    console.log( name <= age ); //true
-    console.log( name <= x ); //false
-    console.log( name <= admin ); //false
-    console.log( '1' <= bul ); //true
-    console.log( '15' <= number ); //true
-    console.log( '' <= bul ); //false
-    console.log( '' <= bulf ); //true
-    console.log( '' <= age ); //true
-    
-    console.log( name === name ); //true
-    console.log( name === number ); //false
-    console.log( name === bul ); //false
-    console.log( name === bulf ); //false
-    console.log( name === age ); //false
-    console.log( name === x ); //false
-    console.log( name === admin ); //false
-    console.log( '1' === bul ); //false
-    console.log( '15' === number ); //false
-    console.log( '' === bul ); //false
-    console.log( '' === bulf ); //false
-    console.log( '' === age ); //false
-    
-    console.log( name != name ); //false
-    console.log( name != number ); //true
-    console.log( name != bul ); //true
-    console.log( name != bulf ); //true
-    console.log( name != age ); //true
-    console.log( name != x ); //true
-    console.log( name != admin ); //true
-    console.log( '1' != bul ); //false
-    console.log( '15' != number ); //false
-    console.log( '' != bul ); //true
-    console.log( '' != bulf ); //false
-    console.log( '' != age ); //true
-    
-    console.log( name !== name ); //false
-    console.log( name !== number ); //true
-    console.log( name !== bul ); //true
-    console.log( name !== bulf ); //true
-    console.log( name !== age ); //true
-    console.log( name !== x ); //true
-    console.log( name !== admin ); //true
-    console.log( '1' !== bul ); //true
-    console.log( '15' !== number ); //true
-    console.log( '' !== bul ); //true
-    console.log( '' !== bulf ); //true
-    console.log( '' !== age ); //true
-    
-    console.log( name || name ); //64
-    console.log( name || number ); //64
-    console.log( name || bul ); //64
-    console.log( name || bulf ); //64
-    console.log( name || age ); //64
-    console.log( name || x ); //64
-    console.log( name || admin ); //64
-    console.log( '1' || bul ); //1
-    console.log( '15' || number ); //15
-    console.log( '' || bul ); //true
-    console.log( '' || bulf ); //false
-    console.log( '' || age ); //null
-    
-    console.log( name && name ); //64
-    console.log( name && number ); //15
-    console.log( name && bul ); //true
-    console.log( name && bulf ); //false
-    console.log( name && age ); //null
-    console.log( name && x ); //undefined
-    console.log( name && admin ); //Object {numb: "Cat"}
-    console.log( '1' && bul ); //true
-    console.log( '15' && number ); //15
-    console.log( '' && bul ); //
-    console.log( '' && bulf ); //
-    console.log( '' && age ); //
-     
-     var strnumd = 'vika65'
-     console.log( +strnumd + number ); //NaN
-     console.log( strnumd - number ); //NaN
-     console.log( +strnumd - number );//NaN
-     console.log( +strnumd / number );//NaN
-     console.log( strnumd / number );//NaN
-     console.log( +strnumd * number );//NaN
-     console.log( strnumd * number );//NaN
-     
-     console.log( strnumd + +number ); //vika6515
-     console.log( +strnumd + +number ); //NaN
-     console.log( strnumd - +number ); //NaN
-     console.log( +strnumd - +number ); //NaN
-     console.log( strnumd * +number ); //NaN
-     console.log( +strnumd * +number ); //NaN
-     console.log( strnumd / +number ); //NaN
-     console.log( +strnumd / +number ); //NaN
-     
-     
-    
-   
-  </script>
+    <script>
+        'use strict';
+        var name = '64',
+            number = 15,
+            bul = true,
+            bulf = false,
+            age = null,
+            x = undefined,
+            admin = {
+                numb: 'Cat'
+            };
+
+        console.log(name + name); //6464
+        console.log(name + number); //6415
+        console.log(name + bul); //64true
+        console.log(name + bulf); //64false
+        console.log(name + age); //64null
+        console.log(name + x); //64undefined
+        console.log(name + admin); //64[object Object]
+
+        console.log(name - name); //0
+        console.log(name - number); //49
+        console.log(name - bul); //63
+        console.log(name - bulf); //64
+        console.log(name - age); //64
+        console.log(name - x); //Nan
+        console.log(name - admin); //Nan
+
+        console.log(name / name); //1
+        console.log(name / number); //4.266666666666667
+        console.log(name / bul); //64
+        console.log(name / bulf); //Infinity
+        console.log(name / age); //Infinity
+        console.log(name / x); //Nan
+
+        console.log(name * name); //4096
+        console.log(name * number); //960
+        console.log(name * bul); //64
+        console.log(name * bulf); //0
+        console.log(name * age); //0
+        console.log(name * x); //Nan
+        console.log(name * admin); //Nan
+
+        console.log(name == name); //true
+        console.log(name == number); //false
+        console.log(name == bul); //false
+        console.log(name == bulf); //false
+        console.log(name == age); //false
+        console.log(name == x); //false
+        console.log(name == admin); //false
+        console.log('1' == bul); //true
+        console.log('15' == number); //true
+        console.log('' == bul); //false
+        console.log('' == bulf); //true
+        console.log('' == age); //false
+
+
+        console.log(name >= name); //true
+        console.log(name >= number); //true
+        console.log(name >= bul); //true
+        console.log(name >= bulf); //true
+        console.log(name >= age); //true
+        console.log(name >= x); //false
+        console.log(name >= admin); //false
+        console.log('1' >= bul); //true
+        console.log('15' >= number); //true
+        console.log('' >= bul); //false
+        console.log('' >= bulf); //true
+        console.log('' >= age); //true
+
+        console.log(name <= name); //true
+        console.log(name <= number); //true
+        console.log(name <= bul); //true
+        console.log(name <= bulf); //true
+        console.log(name <= age); //true
+        console.log(name <= x); //false
+        console.log(name <= admin); //false
+        console.log('1' <= bul); //true
+        console.log('15' <= number); //true
+        console.log('' <= bul); //false
+        console.log('' <= bulf); //true
+        console.log('' <= age); //true
+
+        console.log(name === name); //true
+        console.log(name === number); //false
+        console.log(name === bul); //false
+        console.log(name === bulf); //false
+        console.log(name === age); //false
+        console.log(name === x); //false
+        console.log(name === admin); //false
+        console.log('1' === bul); //false
+        console.log('15' === number); //false
+        console.log('' === bul); //false
+        console.log('' === bulf); //false
+        console.log('' === age); //false
+
+        console.log(name != name); //false
+        console.log(name != number); //true
+        console.log(name != bul); //true
+        console.log(name != bulf); //true
+        console.log(name != age); //true
+        console.log(name != x); //true
+        console.log(name != admin); //true
+        console.log('1' != bul); //false
+        console.log('15' != number); //false
+        console.log('' != bul); //true
+        console.log('' != bulf); //false
+        console.log('' != age); //true
+
+        console.log(name !== name); //false
+        console.log(name !== number); //true
+        console.log(name !== bul); //true
+        console.log(name !== bulf); //true
+        console.log(name !== age); //true
+        console.log(name !== x); //true
+        console.log(name !== admin); //true
+        console.log('1' !== bul); //true
+        console.log('15' !== number); //true
+        console.log('' !== bul); //true
+        console.log('' !== bulf); //true
+        console.log('' !== age); //true
+
+        console.log(name || name); //64
+        console.log(name || number); //64
+        console.log(name || bul); //64
+        console.log(name || bulf); //64
+        console.log(name || age); //64
+        console.log(name || x); //64
+        console.log(name || admin); //64
+        console.log('1' || bul); //1
+        console.log('15' || number); //15
+        console.log('' || bul); //true
+        console.log('' || bulf); //false
+        console.log('' || age); //null
+
+        console.log(name && name); //64
+        console.log(name && number); //15
+        console.log(name && bul); //true
+        console.log(name && bulf); //false
+        console.log(name && age); //null
+        console.log(name && x); //undefined
+        console.log(name && admin); //Object {numb: "Cat"}
+        console.log('1' && bul); //true
+        console.log('15' && number); //15
+        console.log('' && bul); //
+        console.log('' && bulf); //
+        console.log('' && age); //
+
+        var strnumd = 'vika65'
+        console.log(+strnumd + number); //NaN
+        console.log(strnumd - number); //NaN
+        console.log(+strnumd - number); //NaN
+        console.log(+strnumd / number); //NaN
+        console.log(strnumd / number); //NaN
+        console.log(+strnumd * number); //NaN
+        console.log(strnumd * number); //NaN
+
+        console.log(strnumd + +number); //vika6515
+        console.log(+strnumd + +number); //NaN
+        console.log(strnumd - +number); //NaN
+        console.log(+strnumd - +number); //NaN
+        console.log(strnumd * +number); //NaN
+        console.log(+strnumd * +number); //NaN
+        console.log(strnumd / +number); //NaN
+        console.log(+strnumd / +number); //NaN
+    </script>
 </body>
 
-</html>

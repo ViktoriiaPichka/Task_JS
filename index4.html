@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 
-
 <body>
-  <script>
-    'use strict';
-//
-	  function calc (a , b, c) {
-  return a b c
-	  }
-		  var sum = calc (1 + 5)
-	 console.log(+sum);
-// var number = prompt ( " Введите число", 1);
-//	  var sum = +number
-//	   console.log(sum);
-  </script>
+    <script>
+        'use strict';
+        var sum;
+
+        function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        }
+
+        function calc(a, b, c) {
+            if (isNumeric(a) && isNumeric(c)) {
+                sum = (b == " +") ? a + c :
+                    (b == "-") ? a - c :
+                    (b == " / ") ? a / c :
+                    (b == " * ") ? a * c :
+                    " Калькулятор потдержива операции ' + , - , / , * ' ";
+                console.log(sum);
+            } else {
+                console.log(" Не число!");
+            }
+        }
+        calc(20, "-", 9);
+    </script>
 </body>

@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-
+<!--Программа должна переводить число, введенное с клавиатуры в метрах, в километры.-->
 
 <body>
-  <script>
-    'use strict';
- var number = prompt ( " Введите число", 1);
-	  function isNumeric(n) {
-  return !isNaN(parseFloat(n)) && isFinite(n);
-}
-	  if (isNumeric(number)){
-		  var km = +number *1000; 
-		  alert( km );
-	  }else{
-		    alert( " Введите ЧИСЛО еще раз !");
-	  }
-	
-	 
-  </script>
+    <script>
+        'use strict';
+        var number = prompt(" Введите число", 1);
+
+        function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        };
+		
+        if (isNumeric(number)) {
+            var km = +number * 1000;
+            alert(km);
+        } else {
+            alert(" Введите ЧИСЛО еще раз !");
+        }
+    </script>
 </body>
